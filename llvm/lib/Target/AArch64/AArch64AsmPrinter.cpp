@@ -2735,7 +2735,6 @@ void AArch64AsmPrinter::emitInstruction(const MachineInstr *MI) {
     ///    adrp  x0, :tlsdesc_auth:var
     ///    ldr   x16, [x0, #:tlsdesc_auth_lo12:var]
     ///    add   x0, x0, #:tlsdesc_auth_lo12:var
-    ///    .tlsdesccall var
     ///    blraa x16, x0
     ///    (TPIDR_EL0 offset now in x0)
     const MachineOperand &MO_Sym = MI->getOperand(0);
